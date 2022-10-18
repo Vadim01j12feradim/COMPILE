@@ -26,11 +26,11 @@
 
                                                     FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
 
-*   Rojo
-*   Verde
-*   Azul
+
 
 
 ##                                Requerimietnos para la ejecucion
-#1
+*   Para poder ejecutar el codigo de ensamblador se necesitara nasm.
+*   El ensamblador generado es x86 y se ejecuta en <h3>Linux<h3>
+*   Azul
 
