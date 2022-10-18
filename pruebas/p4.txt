@@ -1,0 +1,7 @@
+int i;
+int main(){
+    int r1,r2, res;
+    r1 = 1;
+    r2 = 2;
+    return 0;
+    }

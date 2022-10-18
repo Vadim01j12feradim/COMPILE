@@ -1,0 +1,11 @@
+int main(){
+    string s;
+    int i1,i;
+    i1 = 1;
+    i = 3+1*5;
+    if(i==8)
+        i=1;
+    printi(i1);
+    printi(i);
+    return 0;
+}

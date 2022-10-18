@@ -1,0 +1,5 @@
+int main(){
+    int i,i2;
+    i = 2*(8-2*(6/3))-4;
+    printi(i);
+    }

@@ -1,0 +1,16 @@
+int i;
+string s;
+int suma(int j,int i){
+    return j+i;
+}
+int main(){
+    int i;
+    string s;
+    i=0;
+    j=9;
+    printi(i);
+    prints(s);
+    s = "hola";
+    i = suma(i,4);
+    return 0;
+    }
