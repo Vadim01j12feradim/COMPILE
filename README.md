@@ -38,7 +38,9 @@
             <p style="margin-top:-20px;">Texto 2</p>
             <p style="margin-top:-20px;">Texto 3</p>
             <p style="color:green">Párrafo de color verde.</p>
+          ![Escudo_CUCEI svg(1)](https://user-images.githubusercontent.com/86133272/196342509-c2cface3-920b-40a4-ac84-323c9f26d626.png)
         </div>
+
     </div>
     <div style="display:flex;">
         <img width=80px; height=80px src="https://aprendomates.files.wordpress.com/2010/11/simpsons.jpg"/>
