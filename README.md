@@ -33,8 +33,7 @@
 *   Para poder ejecutar el codigo de ensamblador se necesitara nasm.
 *   El ensamblador generado es x86 y se ejecuta en __Linux__
 *   Puedes probar el compilador en la siguiente direccion (https://vadim01j12feradim.github.io/COMPILE/)
-
-###Lo que es capaz de hacer el compilador:
+###                                Lo que es capaz de hacer el compilador:
 *  Validar retornos.
 *  Validar tipos de datos al asignar.
 *  Validar retornos de del mismo tipo de el que es la función.
@@ -47,12 +46,12 @@
 *  Paso de parámetros a funciones.
 *  Validación de tipos y cantidad de parámetros en funciones.
 *  Definición de variables locales y globales.
-###Lo que no es capaz de hacer el compilador:
+###                              Lo que no es capaz de hacer el compilador:
 *  Utilizar objetos.
 *  Utilizar punteros.
 *  Utilizar tipos de datos diferentes a string, int y float.
 *  Incluir librerías.
-###Información que se suministra.
+###                               Información que se suministra.
 *  Tabla de símbolos.
 *  Tabla LR(1) de la gramática.
 *  Análisis con pila de enteros.
