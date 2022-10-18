@@ -39,3 +39,22 @@
     </div>
 </pre>
 ```
+## Encabezado de Prueba
+<div style="display:flex; flex-direction: column;">
+    <div style="display:flex;">
+        <img width=80px; height=80px src="https://aprendomates.files.wordpress.com/2010/11/simpsons.jpg"/>
+        <div style="display:flex; flex-direction: column; margin-left: 10px; margin-top:-20px;">
+            <p>Texto 1</p>
+            <p style="margin-top:-20px;">Texto 2</p>
+            <p style="margin-top:-20px;">Texto 3</p>
+        </div>
+    </div>
+    <div style="display:flex;">
+        <img width=80px; height=80px src="https://aprendomates.files.wordpress.com/2010/11/simpsons.jpg"/>
+        <div style="display:flex; flex-direction: column; margin-left: 10px; margin-top:-20px;">
+            <p>Texto 1</p>
+            <p style="margin-top:-20px;">Texto 2</p>
+            <p style="margin-top:-20px;">Texto 3</p>
+        </div>
+    </div>
+</div>
