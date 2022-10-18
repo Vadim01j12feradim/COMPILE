@@ -4,6 +4,7 @@
 
                                                 CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS
                                                              INGENIERÍA EN COMPUTACIÓN(INCO)
+![1200px-Escudo_UdeG svg](https://user-images.githubusercontent.com/86133272/196334783-e36bcec2-6f28-4c52-8393-46d2b72e7ee1.png)
 
 
 
