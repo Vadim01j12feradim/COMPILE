@@ -18,13 +18,13 @@
                                                                  CÓDIGO: 216728179.
 
 
-                                                        Tarea: Proyecto final.
+                                                               Tarea: Proyecto final.
 
 
 
 
 
-                                                    FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
+                                                  FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
 
 
 
