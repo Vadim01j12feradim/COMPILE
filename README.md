@@ -26,7 +26,9 @@
 
                                                     FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
 
-
+*   Rojo
+*   Verde
+*   Azul
 
 
 ##                                Requerimietnos para la ejecucion
