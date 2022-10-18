@@ -5,7 +5,7 @@
                                                 CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS
                                                              INGENIERÍA EN COMPUTACIÓN(INCO)
 
-  &nbsp;![1200px-Escudo_UdeG svg(2)](https://user-images.githubusercontent.com/86133272/196335527-b623efcf-04dd-4c40-9843-29dec1ab1eff.png)
+  ![1200px-Escudo_UdeG svg(2)](https://user-images.githubusercontent.com/86133272/196335527-b623efcf-04dd-4c40-9843-29dec1ab1eff.png)
 
                                     MATERIA: SEMINARIO DE SOLUCIÓN DE PROBLEMAS DE TRADUCTORES DE LENGUAJES II. 
 
@@ -25,6 +25,6 @@
 
 
                                                     FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
-   <h1>Pruebas</h1>
+   <h1>&nbsp;&nbsp;Pruebas</h1>
    <br>
    1._
