@@ -7,9 +7,7 @@
 
 
 
-<p align="center">
-  <img src="yhttps://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Escudo_UdeG.svg/1200px-Escudo_UdeG.svg.png" width="20" title="hover text">
-</p>
+![index](https://user-images.githubusercontent.com/86133272/196331384-e6a8943d-e8b0-4d57-8f1a-3e3c06708c12.png)
 
 
 
