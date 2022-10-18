@@ -8,7 +8,7 @@
 
 
 <p align="center">
-  <img src="yhttps://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Escudo_UdeG.svg/1200px-Escudo_UdeG.svg.png" width="350" title="hover text">
+  <img src="yhttps://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Escudo_UdeG.svg/1200px-Escudo_UdeG.svg.png" width="20" title="hover text">
 </p>
 
 
