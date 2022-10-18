@@ -32,5 +32,8 @@
 ##                                Requerimietnos para la ejecucion
 *   Para poder ejecutar el codigo de ensamblador se necesitara nasm.
 *   El ensamblador generado es x86 y se ejecuta en __Linux__
-*   Si descargas el codigo asegurate de que(https://vadim01j12feradim.github.io/COMPILE/)
+*   Puedes probar el compilador en la siguiente direccion (https://vadim01j12feradim.github.io/COMPILE/)
+
+
+
 
