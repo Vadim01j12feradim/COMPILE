@@ -66,8 +66,13 @@
 **Ejemplo e indicaciones.**
 
 1. La página web contiene tres ejemplos de prueba los cuales pueden ser utilizados para comprobar el funcionamiento de el compilador, cuando un programa funciona correctamente la salida es muy parecida a la siguiente.
-
-
+![Screenshot 2022-10-18 00:44:15](https://user-images.githubusercontent.com/86133272/196355411-b9731879-6a62-4822-bac3-4f6c2d2da53d.png)
+2. El ejemplo del código número uno es el siguiente.
+ 
+4. 
+5. 
+6. 
+7. 
 
 
 
