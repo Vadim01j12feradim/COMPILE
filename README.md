@@ -101,5 +101,6 @@
 ![Screenshot 2022-10-18 01:32:51](https://user-images.githubusercontent.com/86133272/196357766-289115c0-33a8-496e-ae3a-91b8ce9c88ef.png)
 18. Para ejecutarlo habrá una terminal en la ubicación donde se encuentra su archivo code.asm y ejecute el comando de ejecución.
 ![Screenshot 2022-10-18 01:34:48](https://user-images.githubusercontent.com/86133272/196357786-f81cd3ac-714f-42f3-9197-206f50733510.png)
-Esto es todo :).
+
+# Esto es todo :).
 
