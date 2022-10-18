@@ -63,4 +63,33 @@
 *  Código en ensamblador.
 *  Botón de descarga de fichero con código ensamblador en el que se incluye información como el creador y comando para ejecutar en la terminal para la ejecución del programa.
 
+**Ejemplo e indicaciones.**
+
+1. La página web contiene tres ejemplos de prueba los cuales pueden ser utilizados para comprobar el funcionamiento de el compilador, cuando un programa funciona correctamente la salida es muy parecida a la siguiente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
