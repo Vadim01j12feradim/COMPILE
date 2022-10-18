@@ -35,6 +35,7 @@
 *   Puedes probar el compilador en la siguiente direccion (https://vadim01j12feradim.github.io/COMPILE/)
 
 
+
 # Ejemplos de ejecucion
 #### 1._ 
-
+![Screenshot 2022-10-18 00:44:15](https://user-images.githubusercontent.com/86133272/196345507-d36aeb73-9f84-411c-a370-b37c82b14517.png)
