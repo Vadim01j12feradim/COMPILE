@@ -6,8 +6,7 @@
                INGENIERÍA EN COMPUTACIÓN(INCO)
 
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Escudo_UdeG.svg/1200px-Escudo_UdeG.svg.png
-
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Escudo_UdeG.svg/1200px-Escudo_UdeG.svg.png)
 
 
 
