@@ -34,8 +34,34 @@
 *   El ensamblador generado es x86 y se ejecuta en __Linux__
 *   Puedes probar el compilador en la siguiente direccion (https://vadim01j12feradim.github.io/COMPILE/)
 
+###Lo que es capaz de hacer el compilador:
+*  Validar retornos.
+*  Validar tipos de datos al asignar.
+*  Validar retornos de del mismo tipo de el que es la función.
+*  Validar retornos.
+*  Análisis de gramática.
+*  Análisis semántico.
+*  Análisis sintáctico.
+*  Definición de funciones.
+*  Llamada a funciones.
+*  Paso de parámetros a funciones.
+*  Validación de tipos y cantidad de parámetros en funciones.
+*  Definición de variables locales y globales.
+###Lo que no es capaz de hacer el compilador:
+*  Utilizar objetos.
+*  Utilizar punteros.
+*  Utilizar tipos de datos diferentes a string, int y float.
+*  Incluir librerías.
+###Información que se suministra.
+*  Tabla de símbolos.
+*  Tabla LR(1) de la gramática.
+*  Análisis con pila de enteros.
+*  Análisis con objetos.
+*  Árbol de análisis gráfico y dinámico.
+*  Tabla de variables.
+*  Tabla de funciones donde se incluye la función printi y prints por defecto que reciben un parámetro int y string respectivamente, utilice estas funciones para imprimir resultados.
+*  Código intermedio.
+*  Código en ensamblador.
+*  Botón de descarga de fichero con código ensamblador en el que se incluye información como el creador y comando para ejecutar en la terminal para la ejecución del programa.
 
 
-# Ejemplos de ejecucion
-#### 1._ 
-![Screenshot 2022-10-18 00:44:15](https://user-images.githubusercontent.com/86133272/196345507-d36aeb73-9f84-411c-a370-b37c82b14517.png)
