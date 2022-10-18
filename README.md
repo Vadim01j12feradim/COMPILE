@@ -5,8 +5,7 @@
                                                 CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS
                                                              INGENIERÍA EN COMPUTACIÓN(INCO)
 
-![1200px-Escudo_UdeG svg(1)](https://user-images.githubusercontent.com/86133272/196335175-69e6abb9-d30a-46cc-bd0f-b30778beee3f.png)
-
+![1200px-Escudo_UdeG svg(2)](https://user-images.githubusercontent.com/86133272/196335527-b623efcf-04dd-4c40-9843-29dec1ab1eff.png)
 
 
                                     MATERIA: SEMINARIO DE SOLUCIÓN DE PROBLEMAS DE TRADUCTORES DE LENGUAJES II. 
