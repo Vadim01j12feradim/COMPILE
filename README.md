@@ -31,6 +31,6 @@
 
 ##                                Requerimietnos para la ejecucion
 *   Para poder ejecutar el codigo de ensamblador se necesitara nasm.
-*   El ensamblador generado es x86 y se ejecuta en <h3>Linux<h3>
-*   Azul
+*   El ensamblador generado es x86 y se ejecuta en __Linux__
+*   Si descargas el codigo asegurate de que
 
