@@ -25,6 +25,6 @@
 
 
                                                     FECHA DE ENTREGA: Lunes 5 de diciembre de 2022.
-   <h1>&nbsp;&nbsp;Pruebas</h1>
+   <p>&nbsp;&nbsp;Pruebas</p>
    <br>
    1._
