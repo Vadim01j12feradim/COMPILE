@@ -90,7 +90,7 @@ class Node {
 //   linkedList.insertNode(99);
 //   linkedList.insertNode(37);
 //   linkedList.print();
-//   console.log(linkedList.findNode(37));
+//   //console.log(linkedList.findNode(37));
   //#endregion
 const num =  /\d/i;
 const numf =  /\d\.\d/i;
@@ -220,7 +220,7 @@ function generateLR(){
     /*94*/matrixLR.push([,,,,,,,,,,,,,,,,,'r20',,,,,,,,,,,,,,,,,,,,,,,,,,,,'']);
     //#region comprobe table
     /*
-    console.log('-------------------------------------------------------------------------------')
+    //console.log('-------------------------------------------------------------------------------')
     let i=0;
     let stringRv = ''
     while (i<matrixLR.length) {
@@ -228,15 +228,15 @@ function generateLR(){
             stringRv = "----->ok"
         else 
             stringRv = "-------------------->Error"
-        console.log(i+": "+matrixLR[i].length+stringRv)
+        //console.log(i+": "+matrixLR[i].length+stringRv)
         i++
     }
-    console.log('-------------------------------------------------------------------------------')
+    //console.log('-------------------------------------------------------------------------------')
     */
     //#endregion
     
 //#endregion
-    //console.log(matrixLR)
+    ////console.log(matrixLR)
     //#region CREATE TABLE LR
     let info = ['identificador','entero','real','cadena','tipo',
     'opSuma','opMul','opRelac','opOr','opAnd','opNot','opIgualdad',';',",",'(',')','{','}','=',
@@ -718,7 +718,7 @@ function executeEnsambler() {
                                 while (j<alter.length) {
                                     let acum = ''
                                     while(t[t1]!=','  && t1 < t.length){
-                                        console.log(t[t1])
+                                        //console.log(t[t1])
                                         acum+=t[t1]
                                         t1++
                                     }t1++
@@ -1013,7 +1013,15 @@ function comprobeVar(Var,ambito) {
 function getTipe(Var,ambito) {
     let i=0;
     while (i<VarsCode.length) {
-        if (ambito == VarsCode[i][2] || VarsCode[i][2] == "#")
+        if (ambito == VarsCode[i][2])
+            if (Var == VarsCode[i][0]) {
+                return VarsCode[i][1]
+            }
+        i++
+    }
+    i = 0
+    while (i<VarsCode.length) {
+        if (VarsCode[i][2] == "#")
             if (Var == VarsCode[i][0]) {
                 return VarsCode[i][1]
             }
@@ -1038,15 +1046,15 @@ class R0{
     }
     Print(){
         
-        //console.log(this.TIP)
+        ////console.log(this.TIP)
         NODES.push({ id: this.id, label: this.TIP })
         EDGES.push({ from: this.id, to: this.Aceptado.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
         //this.Aceptado.Print()
     }
     getInfo(){
-        console.log(this.TIP+"(" + this.id+")"+" -> "+this.Aceptado.id)
+        //console.log(this.TIP+"(" + this.id+")"+" -> "+this.Aceptado.id)
         this.Aceptado.getInfo("#")
     }
     examine(){
@@ -1062,12 +1070,12 @@ class R1{
     Print(){
         NODES.push({ id: this.id, label: 'R1 <programa>' })
         EDGES.push({ from: this.id, to: this.Definiciones.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
         //this.Definiciones.Print()
     }
     getInfo(ambito){
-        console.log("R1("+this.id+")")
+        //console.log("R1("+this.id+")")
         this.Definiciones.getInfo(ambito)
     }
     examine(){
@@ -1087,12 +1095,12 @@ class R2{
         NODES.push({ id: this.id, label: 'R2 <Definiciones>' })
         NODES.push({ id: ed, label: this.e })
         EDGES.push({ from: this.id, to: ed })
-        //console.log(this.TIP)
-        //console.log(this.id)
-        //console.log(ed)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
+        ////console.log(ed)
     }
     getInfo(){
-        console.log("R2("+this.id+")")
+        //console.log("R2("+this.id+")")
     }
     examine(){
         //nada
@@ -1109,13 +1117,13 @@ class R3{
         NODES.push({ id: this.id, label: 'R3 <Definiciones>' })
         EDGES.push({ from: this.id, to: this.Definicion.id })
         EDGES.push({ from: this.id, to: this.Definiciones.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
         //this.Definicion.Print()
         //this.Definiciones.Print()
     }
     getInfo(ambito){
-        console.log("R3("+this.id+")")
+        //console.log("R3("+this.id+")")
         this.Definicion.getInfo(ambito)
         this.Definiciones.getInfo(ambito)
     }
@@ -1133,12 +1141,12 @@ class R4{
     Print(){
         NODES.push({ id: this.id, label: 'R4 <Definicion>' })
         EDGES.push({ from: this.id, to: this.DefVar.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
         //this.DefVar.Print()
     }
     getInfo(ambito){
-        console.log("R4("+this.id+") ")
+        //console.log("R4("+this.id+") ")
         this.DefVar.getInfo(ambito)
     }
     examine(){
@@ -1155,12 +1163,12 @@ class R5{
     Print(){
         NODES.push({ id: this.id, label: 'R5 <Definicion>' })
         EDGES.push({ from: this.id, to: this.DefFunc.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
         //this.DefFunc.Print()
     }
     getInfo(){
-        console.log("R5("+this.id+")")
+        //console.log("R5("+this.id+")")
         this.DefFunc.getInfo()
     }
     examine(){
@@ -1189,14 +1197,14 @@ class R6{
         EDGES.push({ from: this.id, to: this.ListaVar.id })
         NODES.push({ id: i3, label: this.PointAndCom })
         EDGES.push({ from: this.id, to: i3 })
-        //console.log(this.TIP)
-        //console.log(this.id)
-        //console.log(i1)
-        //console.log(i2)
-        //console.log(i3)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
+        ////console.log(i1)
+        ////console.log(i2)
+        ////console.log(i3)
     }
     getInfo(ambito){
-        console.log("R6("+this.id+")")
+        //console.log("R6("+this.id+")")
         //this.ListaVar.id + " "+this.PointAndCom
         let Exist = comprobeVar(this.identificador,ambito)
         if (Exist.length>0) {
@@ -1222,12 +1230,12 @@ class R7{
         let i1 = getNewId()
         adNode(i1,this.e)
         adEdge(this.id,i1)
-        //console.log(this.TIP)
-        //console.log(this.id)
-        //console.log(i1)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
+        ////console.log(i1)
     }
     getInfo(){
-    console.log("R7("+this.id+")")
+    //console.log("R7("+this.id+")")
     }
     examine(){
         //nada
@@ -1253,13 +1261,13 @@ class R8{
         EDGES.push({ from: this.id, to: i2 })
         //this.P_ListaVar.Print()
         EDGES.push({ from: this.id, to: this.P_ListaVar.id })
-        //console.log(this.TIP)
-        //console.log(this.id)
-        //console.log(i1)
-        //console.log(i2)
+        ////console.log(this.TIP)
+        ////console.log(this.id)
+        ////console.log(i1)
+        ////console.log(i2)
     }
     getInfo(ambito,tipo){
-        console.log("R8("+this.id+")")
+        //console.log("R8("+this.id+")")
         let comp = comprobeVar(this.identificador,ambito)
         if (comp.length > 0) {
             alert(comp);//Error redeclaracion
@@ -1304,7 +1312,7 @@ class R9{
         adEdge(this.id,this.P_BloqFunc.id)
     }
     getInfo(){
-        console.log("R9("+this.id+")")
+        //console.log("R9("+this.id+")")
         let Exist =  comprobeVar(this.identificador,"#")
         if (Exist.length>0) {
             alert(Exist)//Error redeclaracion
@@ -1337,7 +1345,7 @@ class R10{
         adEdge(this.id,i1)
     }
     getInfo(){
-        console.log("R10("+this.id+")")
+        //console.log("R10("+this.id+")")
     }
     examine(){
         //nada
@@ -1363,7 +1371,7 @@ class R11{
         adEdge(this.id,this.P_ListaParam.id)
     }
     getInfo(ambito){
-        console.log("R11("+this.id+")")
+        //console.log("R11("+this.id+")")
         
         let axist =  comprobeVar(this.identificador,ambito)
         if (axist.length > 0) {
@@ -1393,7 +1401,7 @@ class R12{
 
     }
     getInfo(ambito){
-        console.log("R12("+this.id+")")
+        //console.log("R12("+this.id+")")
     }
     examine(){
         
@@ -1426,7 +1434,7 @@ class R13{
  
     }
     getInfo(ambito){
-        console.log("R13("+this.id+")")
+        //console.log("R13("+this.id+")")
         let axist =  comprobeVar(this.identificador,ambito)
         if (axist.length > 0) {
             alert(axist);//Error redeclaracion
@@ -1461,7 +1469,7 @@ class R14{
         adEdge(this.id,i2)
     }
     getInfo(ambito, tipo){
-        console.log("R14("+this.id+")")
+        //console.log("R14("+this.id+")")
         this.P_DefLocales.getInfo(ambito,tipo)
     }
     examine(){
@@ -1483,7 +1491,7 @@ class R15{
         adEdge(this.id,i1)
     }
     getInfo(ambito,tipo){
-        console.log("R15("+this.id+")")
+        //console.log("R15("+this.id+")")
     }
     examine(){
         //nada
@@ -1504,7 +1512,7 @@ class R16{
         adEdge(this.id,this.P_DefLocales.id)
     }
     getInfo(ambito,tipo){
-        console.log("R16("+this.id+")")
+        //console.log("R16("+this.id+")")
         this.P_DefLocal.getInfo(ambito,tipo)
         this.P_DefLocales.getInfo(ambito,tipo)
 
@@ -1526,7 +1534,7 @@ class R17{
         adEdge(this.id,this.P_DefVar.id)
     }
     getInfo(ambito,tipo){
-        console.log("R17("+this.id+")")
+        //console.log("R17("+this.id+")")
         this.P_DefVar.getInfo(ambito)
     }
     examine(){
@@ -1545,7 +1553,7 @@ class R18{
         adEdge(this.id,this.P_Sentencia.id)
     }
     getInfo(ambito,tipo){
-        console.log("R18("+this.id+")")
+        //console.log("R18("+this.id+")")
         //alert(ambito+" "+tipo)
         this.P_Sentencia.getInfo(ambito,tipo)
     }
@@ -1566,7 +1574,7 @@ class R19{
         adEdge(this.id,i1)
     }
     getInfo(ambito){
-        console.log("R19("+this.id+")")
+        //console.log("R19("+this.id+")")
     }
     examine(){
         //nada
@@ -1587,7 +1595,7 @@ class R20{
         adEdge(this.id,this.P_Sentencias.id)
     }
     getInfo(ambito,tipo){
-        console.log("R20("+this.id+")")
+        //console.log("R20("+this.id+")")
         this.P_Sentencia.getInfo(ambito,tipo)
         this.P_Sentencias.getInfo(ambito,tipo)
     }
@@ -1623,10 +1631,11 @@ class R21{
         adEdge(this.id,i3)         
     }
     getInfo(ambito){
-        console.log("R21("+this.id+")")
+        //console.log("R21("+this.id+")")
         //alert(ambito,tipo)
         //alert("21")
         let tipo = getTipe(this.identificador,ambito)
+        
         this.P_Expresion.getInfo(ambito,tipo)
     }
     examine(){
@@ -1678,7 +1687,7 @@ class R22{
         adEdge(this.id,this.P_Otro.id)   
     }
     getInfo(ambito,tipo){
-        console.log("R22("+this.id+")")
+        //console.log("R22("+this.id+")")
         this.P_Expresion.getInfo(ambito,"all")
         this.P_SentenciaBloque.getInfo(ambito,tipo)
 
@@ -1727,7 +1736,7 @@ class R23{
         adEdge(this.id,this.P_Bloque.id)
     }
     getInfo(ambito,tipo){
-        console.log("R23("+this.id+")")    
+        //console.log("R23("+this.id+")")    
         this.P_Expresion.getInfo(ambito,"all")
         this.P_Bloque.getInfo(ambito,tipo)
     }
@@ -1770,7 +1779,7 @@ class R24{
         adEdge(this.id,i2) 
     }
     getInfo(ambito,tipo){
-        console.log("R24("+this.id+")")
+        //console.log("R24("+this.id+")")
         //alert("tipo: "+tipo)
         //alert(ambito+" "+tipo)
         this.P_ValorRegresa.getInfo(ambito,tipo)
@@ -1799,7 +1808,7 @@ class R25{
         adEdge(this.id,i1) 
     }
     getInfo(ambito,tipo){
-        console.log("R25("+this.id+")")
+        //console.log("R25("+this.id+")")
         //alert(ambito+" "+"all")
         tipo = "all"
         //ambito = "#"
@@ -1823,7 +1832,7 @@ class R26{
         adEdge(this.id,i1) 
     }
     getInfo(ambito){
-        console.log("R26("+this.id+")")
+        //console.log("R26("+this.id+")")
     }
     examine(){
         
@@ -1846,7 +1855,7 @@ class R27{
         adEdge(this.id,this.P_SentenciaBloque.id)
     }
     getInfo(ambito){
-        console.log("R27("+this.id+")")
+        //console.log("R27("+this.id+")")
     }
     examine(){
         this.P_SentenciaBloque.examine()
@@ -1875,7 +1884,7 @@ class R28{
         adEdge(this.id,i2)
     }
     getInfo(ambito,tipo){
-        console.log("R28("+this.id+")")
+        //console.log("R28("+this.id+")")
         this.P_Sentencias.getInfo(ambito,tipo)
     }
     examine(ambito){
@@ -1895,7 +1904,7 @@ class R29{
         adEdge(this.id,i1)
     }
     getInfo(ambito){
-        console.log("R29("+this.id+")")
+        //console.log("R29("+this.id+")")
     }
     examine(){
         return ''
@@ -1914,7 +1923,7 @@ class R30{
     }
     getInfo(ambito,tipo){
         //alert("30 "+ambito+tipo)
-        console.log("R30("+this.id+")")
+        //console.log("R30("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
     }
     examine(){
@@ -1934,7 +1943,7 @@ class R31{
         adEdge(this.id,i1)
     }
     getInfo(ambito){
-        console.log("R31("+this.id+")")
+        //console.log("R31("+this.id+")")
     }
     examine(){
         return ''
@@ -1956,7 +1965,7 @@ class R32{
     }
     getInfo(ambito,ar){
         //alert("32 "+ambito+tipo)
-        console.log("R32("+this.id+")")
+        //console.log("R32("+this.id+")")
 
         this.P_Expresion.getInfo(ambito,ar[0])
         ar.shift()
@@ -1984,7 +1993,7 @@ class R33{
         adEdge(this.id,i1)
     }
     getInfo(ambito){
-        console.log("R33("+this.id+")")
+        //console.log("R33("+this.id+")")
     }
     examine(){
         return ''
@@ -2015,7 +2024,7 @@ class R34{
         
     }
     getInfo(ambito,tipo){
-        console.log("R34("+this.id+")")
+        //console.log("R34("+this.id+")")
         //alert(tipo)
         this.P_Expresion.getInfo(ambito,tipo[0])
         tipo.shift()
@@ -2042,7 +2051,7 @@ class R35{
         adEdge(this.id,this.P_LlamadaFunc.id)
     }
     getInfo(ambito,tipo){
-        console.log("R35("+this.id+")")
+        //console.log("R35("+this.id+")")
         //alert(ambito + " "+tipo)
         this.P_LlamadaFunc.getInfo(ambito,tipo)
     }
@@ -2065,8 +2074,10 @@ class R36{
         adEdge(this.id,i1)
     }
     getInfo(ambito,tipo){
-        console.log("R36("+this.id+")")
+        //console.log("R36("+this.id+")")
+        
         let tipe = getTipe(this.identificador,ambito)
+        //alert("R36"+ambito+" : "+tipo+" type: "+tipe)
         if (tipe != tipo  && tipo!="all") {
             alert("Error de asiognacion o retorno de variable "+
             tipo +" con "+tipe)
@@ -2099,7 +2110,7 @@ class R37{
         adEdge(this.id,i1)
     }
     getInfo(ambito,tipo){
-        console.log("R37("+this.id+")")
+        //console.log("R37("+this.id+")")
         if (tipo != "int"  && tipo!="all") {
             alert("Error de asiognacion o retorno de variable "+
             tipo+" con int")
@@ -2133,7 +2144,8 @@ class R38{
         adEdge(this.id,i1)
     }
     getInfo(ambito,tipo){
-        console.log("R38("+this.id+")")
+        //console.log("R38("+this.id+")")
+        
         if (tipo != "float" && tipo!="all") {
             alert("Error de asiognacion o retorno de variable "+
             tipo +" con float")
@@ -2167,7 +2179,7 @@ class R39{
     }
     getInfo(ambito,tipo){
         
-        console.log("R39("+this.id+")")
+        //console.log("R39("+this.id+")")
         if (tipo != "string"  && tipo!="all") {
             alert("Error de asiognacion de variable")
             throw new FatalError("Error de asiognacion o retorno de variable "+
@@ -2213,19 +2225,19 @@ class R40{
     }
     getInfo(ambito,tipo){
         //alert("40r "+ ambito+tipo+" id"+this.id)
-        console.log("R40("+this.id+")")
+        //console.log("R40("+this.id+")")
 
         let tipe = getTipe(this.identificador,"#")
-        //console.log(ambito +" "+tipo)
+        ////console.log(ambito +" "+tipo)
         
         let a
         a = getArguments(this.identificador,tipe)
         //alert(ar[0])
         let ar = a.slice()
         //alert(ar[0])
-        //console.log(ar)
+        ////console.log(ar)
 
-        //console.log(tipe)
+        ////console.log(tipe)
         if (tipe!=tipo && tipo!="all") {
             alert("La funcion "+this.identificador + 
                 " no es de tipo " + tipo);
@@ -2284,7 +2296,7 @@ class R41{
         adEdge(this.id,this.P_Sentencia.id)
     }
     getInfo(ambito,tipo){
-        console.log("R41("+this.id+")")
+        //console.log("R41("+this.id+")")
         this.P_Sentencia.getInfo(ambito,tipo)
     }
     examine(){
@@ -2303,7 +2315,7 @@ class R42{
         adEdge(this.id,this.P_Bloque.id)
     }
     getInfo(ambito,tipo){
-        console.log("R42("+this.id+")")
+        //console.log("R42("+this.id+")")
         this.P_Bloque.getInfo(ambito,tipo)
     }
     examine(){
@@ -2332,7 +2344,7 @@ class R43{
         adEdge(this.id,i2) 
     }
     getInfo(ambito,tipo){
-        console.log("R43("+this.id+")")
+        //console.log("R43("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
     }
     examine(){
@@ -2356,7 +2368,7 @@ class R44{
         adEdge(this.id,this.P_Expresion.id)
     }
     getInfo(ambito,tipo){
-        console.log("R44("+this.id+")")
+        //console.log("R44("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
     }
     examine(){
@@ -2380,7 +2392,7 @@ class R45{
         adEdge(this.id,this.P_Expresion.id)
     }
     getInfo(ambito,tipo){
-        console.log("R45("+this.id+")")
+        //console.log("R45("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
     }
     examine(){
@@ -2409,7 +2421,7 @@ class R46{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R46("+this.id+")")
+        //console.log("R46("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
         this.P_Expresion2.getInfo(ambito,tipo)
     }
@@ -2444,7 +2456,8 @@ class R47{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R47("+this.id+")")
+        //console.log("R47("+this.id+")")
+        
         this.P_Expresion.getInfo(ambito,tipo)
         this.P_Expresion2.getInfo(ambito,tipo)
     }
@@ -2479,7 +2492,7 @@ class R48{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R48("+this.id+")")
+        //console.log("R48("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
         this.P_Expresion2.getInfo(ambito,tipo)
     }
@@ -2514,7 +2527,7 @@ class R49{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R49("+this.id+")")
+        //console.log("R49("+this.id+")")
         let v1 = this.P_Expresion.getInfo(ambito,tipo)
         let v2 = this.P_Expresion2.getInfo(ambito,tipo)
         if(v1 != v2){
@@ -2554,7 +2567,7 @@ class R50{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R50("+this.id+")")
+        //console.log("R50("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
         this.P_Expresion2.getInfo(ambito,tipo)
     }
@@ -2588,7 +2601,7 @@ class R51{
         adEdge(this.id,this.P_Expresion2.id)
     }
     getInfo(ambito,tipo){
-        console.log("R51("+this.id+")")
+        //console.log("R51("+this.id+")")
         this.P_Expresion.getInfo(ambito,tipo)
         this.P_Expresion2.getInfo(ambito,tipo)
     }
@@ -2613,11 +2626,11 @@ class R52{
         adEdge(this.id,this.P_Termino.id)
     }
     getInfo(ambito,tipo){
-        console.log("R52("+this.id+")")
-        //console.log(ambito+" "+tipo)
+        //console.log("R52("+this.id+")")
+        ////console.log(ambito+" "+tipo)
         //alert("52"+ambito + " "+ tipo)
         //alert(tipo+" "+ambito)
-
+        
         return  this.P_Termino.getInfo(ambito,tipo)
 
     }
@@ -2670,7 +2683,7 @@ class Gramatic{
     let arr = []
     let i=0;
     while (i<this.arrayLexico.length) {
-        //console.log(this.arrayLexico[i][1])
+        ////console.log(this.arrayLexico[i][1])
         arr.push(this.arrayLexico[i][1])
         i++
     }
@@ -2818,7 +2831,7 @@ class Gramatic{
         // let a = getArguments("prints","string")
         // let ar = a.slice()
         // //alert(ar[0])
-        // console.log(ar)
+        // //console.log(ar)
         while (true) {
             let y = pila[pila.length-1]
             //let yR = this.PR[this.PR.length-1]
@@ -2826,18 +2839,18 @@ class Gramatic{
             
             let xR = this.ER[0]
             
-            //console.log(y+" -- "+x + " = "+pila)
+            ////console.log(y+" -- "+x + " = "+pila)
             let coordenada = matrixLR[y][x]
-            //console.log(coordenada)
-            //console.log(pila)
+            ////console.log(coordenada)
+            ////console.log(pila)
             
 
             tableSintactico +='<tr class="rowlr"><th class="rowlr">'+pila+
                             '</th><th class="rowlr">'+ entrada + '</th><th class="rowlr">'+
                             coordenada+'</th></tr>'
-            //console.log("Pila: "+pila)
-            //console.log("Entrada: "+entrada)
-            //console.log(x+','+y+":"+coordenada) 
+            ////console.log("Pila: "+pila)
+            ////console.log("Entrada: "+entrada)
+            ////console.log(x+','+y+":"+coordenada) 
             if (coordenada == undefined) {
                 //alert("r21")
                 alert("Error")
@@ -2862,10 +2875,10 @@ class Gramatic{
                             tableSintacticoR +='<tr class="rowlr"><th class="rowlr">'+this.dropCom(this.PR)+
                             '</th><th class="rowlr">'+this.dropCom(this.ER) + '</th><th class="rowlr">'+
                             coordenada+'</th></tr>'*/
-                            console.log("Programa correcto"+this.PR.length)
+                            //console.log("Programa correcto"+this.PR.length)
                             // let i=0
                             // while (i<idsRestricted.length) {
-                            //     console.log(idsRestricted[i])
+                            //     //console.log(idsRestricted[i])
                             //     i++;
                             // }
                             this.PR[4].getInfo()
@@ -3496,11 +3509,11 @@ class Gramatic{
                     pila.push(numE)
                     this.ER.shift()
                     entrada.shift()
-                    //console.log(coordenada)
+                    ////console.log(coordenada)
                     break;
                 default:
                     // if (!num.test(coordenada.charAt(0))) {//
-                    //     console.log("Error")
+                    //     //console.log("Error")
                     //     return
                     // }
                     alert("Error en el analisis")
@@ -3540,7 +3553,7 @@ class Analisis{
     }
     executeLexico(){
         // this.lexico.push(["tipo",4,"int"])
-        //console.log("lexico execution")
+        ////console.log("lexico execution")
         //alert(this.lexico)
         tableLexico = '<table class="default">'+
         '<tr class="row"><th>Simbolo</th><th>Tipo</th><th>Valor</th></tr>'
@@ -3582,10 +3595,10 @@ class Analisis{
         }
     }
     ExecuteTreeCode(){
-        // console.log(this.matrixTree)
+        // //console.log(this.matrixTree)
         for (let i = 0; i < this.matrixTree.length; i++) {
             //alert(this.matrixTree[i])
-            //console.log()
+            ////console.log()
             let t = this.isTicket(this.matrixTree[i])
             //alert(this.matrixTree[i]+" "+t)
             if (t) {
@@ -3649,7 +3662,7 @@ class Analisis{
             this.preanalisis = this.input.charAt(this.actual);
             if (openparent.test(this.preanalisis)) {
                     this.lexico.push(["(",14,"("])
-                    //console.log("(")
+                    ////console.log("(")
                     this.actual++;
                     return "";
             }
@@ -3669,7 +3682,7 @@ class Analisis{
             this.preanalisis = this.input.charAt(this.actual);
             if (closeparent.test(this.preanalisis)) {
                     this.lexico.push([")",15,")"])
-                    //console.log(")");
+                    ////console.log(")");
                     this.actual++;
                     return "";
             }
@@ -3705,7 +3718,7 @@ class Analisis{
             if (this.preanalisis == ";") {
                     if(!this.pointCReplace){
                         this.lexico.push([";",12,";"])
-                        //console.log(";")
+                        ////console.log(";")
                     }else{
                         this.pointCReplace = false;
                         this.preanalisis = "}"
@@ -3736,14 +3749,14 @@ class Analisis{
             } else
             if (temp=="int") {
                 this.lexico.push(["tipo",4,"int"])
-                //console.log("int")
+                ////console.log("int")
                 this.actual+=3;
 
                 return temp;
             }
             else if (tems=="float") {
                 this.lexico.push(["tipo",4,"float"])
-                //console.log("float")
+                ////console.log("float")
                 this.actual+=5;
                 return tems;
             }
@@ -3761,7 +3774,7 @@ class Analisis{
             
             let temp  = this.input.substring(this.actual,this.actual+1);
             if (temp=="}") {
-                //console.log("} simple")
+                ////console.log("} simple")
                 // this.input.replaceAt(this.actual) = ";";
                 // alert(this.input[this.actual])
                 //this.actual++;
@@ -3798,7 +3811,7 @@ class Analisis{
             if (temp=="}") {
                 //this.actual+=1;
                 this.lexico.push(["}",17,"}"])
-                //console.log("}")
+                ////console.log("}")
                 return temp;
             }
 
@@ -3816,24 +3829,24 @@ class Analisis{
         if (simbol.test(this.preanalisis)) {
             //alert("Simbol")
             this.lexico.push(["opSuma",5,this.preanalisis])
-            //console.log(this.preanalisis)
+            ////console.log(this.preanalisis)
             this.actual++;
             let temp = this.preanalisis;
             let eas=this.expresion_arit();
             //alert("expresion_arit: "+eas)
             let eam=this.exp_arit();
-            //console.log("exp_arit simbol: "+temp+eam + eas);
+            ////console.log("exp_arit simbol: "+temp+eam + eas);
             return temp+eam + eas;
         }
         else if(operation.test(this.preanalisis)){
             this.actual++;
             this.lexico.push(["opMul",6,this.preanalisis])
-            //console.log(this.preanalisis)
+            ////console.log(this.preanalisis)
             let temp = this.preanalisis;
             let eas=this.expresion_arit();
-            //console.log("tengo mi esxpresio arit: "+eas)
+            ////console.log("tengo mi esxpresio arit: "+eas)
             let eam=this.exp_arit();
-            //console.log("exp_arit operation: eam: "+eam +" temp: "+temp+"eas: "+ eas)
+            ////console.log("exp_arit operation: eam: "+eam +" temp: "+temp+"eas: "+ eas)
             return eam +temp+ eas ;
         }
         else
@@ -3844,7 +3857,7 @@ class Analisis{
             this.preanalisis = this.input.charAt(this.actual);
             //alert(this.preanalisis)
             //alert("expresion aritmetica")
-            //console.log("que es: "+this.preanalisis)
+            ////console.log("que es: "+this.preanalisis)
             // if (tipo == "string") {
             if (this.preanalisis == "!") {
                 this.lexico.push(["opNot",10,this.preanalisis])
@@ -3879,13 +3892,13 @@ class Analisis{
             }
             let tem;
             if (this.preanalisis=="("){
-                //console.log("es un parentesis "+this.preanalisis)
+                ////console.log("es un parentesis "+this.preanalisis)
                 let op = this.exopparent();
                 let ea = this.expresion_arit();
                 return op+ea+this.exclosarent()+this.exp_arit();
             }
             else if (num.test(this.preanalisis)){
-                //console.log("es un numero "+this.preanalisis)
+                ////console.log("es un numero "+this.preanalisis)
                 let n = this.numeros();
                 //alert("estos en numero: ")
                 let e = this.exp_arit();
@@ -3913,10 +3926,10 @@ class Analisis{
                 return n;
             }else
                 tem = this.getIsString();
-                // console.log(tipo + " "+tem+" " +this.matrix)
+                // //console.log(tipo + " "+tem+" " +this.matrix)
 
                 if (tem.length>0/*this.exist([tipo,tem])*/){
-                    //console.log("es un un id "+this.preanalisis)
+                    ////console.log("es un un id "+this.preanalisis)
                     
                     let id  =  this.identificador();
                     this.lexico.push(["identificador",0,id])
@@ -3948,7 +3961,7 @@ class Analisis{
                         this.exclosarent();
                         //alert("sali")
                     }
-                    //console.log(id)
+                    ////console.log(id)
                     let ea=this.exp_arit();
                     //alert("id")
                     //alert("sali de mi expresion"+ea)
@@ -4021,7 +4034,7 @@ class Analisis{
            if (ida== "(") {
             return this.expresion_arit()
            }
-            //console.log(ida)
+            ////console.log(ida)
             //alert("Asignar: "+ida)
             // if (!this.exist([tipo,ida])) {
             //    error = "La variable "+ida+" de tipo " + tipo + " no existe";
@@ -4032,7 +4045,7 @@ class Analisis{
             this.preanalisis  = this.input.substring(this.actual,this.actual+1);
             if (this.preanalisis=="=") {
                 
-                //console.log("=")
+                ////console.log("=")
                 this.lexico.push(["=",18,"="])
                 this.actual++;
                 let temp = this.preanalisis;
@@ -4040,7 +4053,7 @@ class Analisis{
                 let ea = this.expresion_arit();
                 //alert("Equal")
                 //alert("sali: "+ida)
-                //console.log("Asignar: "+ida+" "+temp+" "+ea);
+                ////console.log("Asignar: "+ida+" "+temp+" "+ea);
                 //alert(ea)
 
                 let t1 = this.getVal(ea);
@@ -4052,7 +4065,7 @@ class Analisis{
                      s,t2]);
                 //this.matrix.push([tipo,"t"+(this.labelCount)]);
                 //this.labelCount++;
-                // console.log("Dimention: "+this.matrixTree.length);
+                // //console.log("Dimention: "+this.matrixTree.length);
                 //alert(ida+temp+ea)
                 return ida+temp+ea;
             }
@@ -4073,7 +4086,7 @@ class Analisis{
 
             if (this.preanalisis=="while") {
                 
-                //console.log("while")
+                ////console.log("while")
                 this.lexico.push(["while",20,"while"])
                 this.actual+=5;
                 let pt = this.preanalisis;
@@ -4084,7 +4097,7 @@ class Analisis{
                 //onsole.log("While is ok")
                 let ex = this.exclosarent();
                 
-                //console.log("While is ok")
+                ////console.log("While is ok")
                 this.matrixTree.push("L"+this.ticket+":");
                 let temp = this.ticket;
                 this.ticket++;
@@ -4101,13 +4114,13 @@ class Analisis{
                 }
                 this.lexico.push(["{",16,"{"])
                 
-                //console.log("{")
+                ////console.log("{")
                 this.actual++;
                 
                 let or = this.ordenes(false);
                 //alert(this.input.charAt(this.actual))
                 let en = this.endWhile();
-                // console.log("pt: "+pt+" op: "+op+" co: "+co+" ex: "+
+                // //console.log("pt: "+pt+" op: "+op+" co: "+co+" ex: "+
                 //             ex+" or: "+or+" en: "+en)
                 this.matrixTree.push("goto L"+temp+";")
                 this.matrixTree.push("L"+temp2+":")
@@ -4174,13 +4187,13 @@ class Analisis{
             if (numf.test(tem)) {
                 let p = this.numero_real();
                 this.lexico.push(["real",2,p])
-                //console.log(p)
+                ////console.log(p)
                 return p;
             }else
                 if (num.test(tem)) {
                     let p = this.numero_entero();
                     this.lexico.push(["entero",1,p])
-                    //console.log(p)
+                    ////console.log(p)
                     return p;
                 }
             error = "No es un numero entero o real";
@@ -4208,7 +4221,7 @@ class Analisis{
                 //alert(temp + "String")
                 temp = this.identificador();
                 this.lexico.push(["identificador",0,temp])
-                //console.log(temp)
+                ////console.log(temp)
                 return temp;
             }
             
@@ -4237,10 +4250,10 @@ class Analisis{
             if (act=="<="||act==">="||act=="!="||act=="==") {
                 if (act=="<="||act==">=") {
                     this.lexico.push(["opRelac",7,act])
-                    // console.log(act)
+                    // //console.log(act)
                 }else{
                     this.lexico.push(["opIgualdad",11,act])
-                    //console.log(act)
+                    ////console.log(act)
                 }
                     
                 
@@ -4250,7 +4263,7 @@ class Analisis{
             act = this.input.charAt(this.actual);
                 if (act=="<"||act==">") {
                     this.lexico.push(["opRelac",7,act])
-                    //console.log(act)
+                    ////console.log(act)
                     this.actual++;
                     return act;
                 }
@@ -4296,7 +4309,7 @@ class Analisis{
                     this.lexico.push(["}",17,"}"])
                     this.lexico.push(["else",22,"else"])
                     this.lexico.push(["{",16,"{"])
-                    //console.log("}else{")
+                    ////console.log("}else{")
                     //alert("else ok")
                     //this.matrixTree.push("goto L"+(this.ticket+2)+";");
                     //this.matrixTree.push("L"+
@@ -4314,7 +4327,7 @@ class Analisis{
             if(telseCo=="}else"){
                 this.lexico.push(["}",17,"}"])
                 this.lexico.push(["else",22,"else"])
-                //console.log("}else{")
+                ////console.log("}else{")
                 //alert("else ok")
                 //this.matrixTree.push("goto L"+(this.ticket+2)+";");
                 //this.matrixTree.push("L"+
@@ -4336,7 +4349,7 @@ class Analisis{
                     
                     
                     temend = this.end();
-                    //console.log("}")
+                    ////console.log("}")
                     return temend;
 
                 }
@@ -4385,10 +4398,10 @@ class Analisis{
             if (idNext == "&&" || idNext == "||"){
                 if (idNext == "&&") {
                     this.lexico.push(["opAnd",9,idNext])
-                    //console.log(idNext)
+                    ////console.log(idNext)
                 }else{
                     this.lexico.push(["opOr",8,idNext])
-                    //console.log(idNext)
+                    ////console.log(idNext)
                 }
                 isOtherCondition = true;
                 cp+=idNext;
@@ -4404,7 +4417,7 @@ class Analisis{
             this.preanalisis = this.input.substring(this.actual,this.actual+2);
             if(this.preanalisis=="if"){
                 this.lexico.push(["if",19,"if"])
-                //console.log("if")
+                ////console.log("if")
                 this.actual+=2;
                 let op = this.exopparent();
                 let cp =this.contitionsAll()
@@ -4422,7 +4435,7 @@ class Analisis{
                     this.lexico.push(["{",16,"{"])
                     this.actual ++;
                     ord = this.ordenes(false);
-                    //console.log("{")
+                    ////console.log("{")
                     
                 }else{
                     //alert("orden " + this.input.charAt(this.actual))
@@ -4497,20 +4510,20 @@ class Analisis{
                 let cond = this.condicion();
                 this.input = this.input.replaceAt(this.actual, ';');
                 this.pointCReplace = true;
-                //console.log("sali del if: "+this.input.charAt(this.actual))
+                ////console.log("sali del if: "+this.input.charAt(this.actual))
                 return cond;
             }else
                 if (tempwhile=="while") {
-                    //console.log("In the bucle while")
-                   //console.log("In the while")
+                    ////console.log("In the bucle while")
+                   ////console.log("In the while")
                    let bW = this.bucle_while();
                    this.input = this.input.replaceAt(this.actual, ';');
                    this.pointCReplace = true;
-                    //console.log("sali del while: "+this.input.charAt(this.actual))
+                    ////console.log("sali del while: "+this.input.charAt(this.actual))
                     return bW;
                 }
                 else if (tempint == "int" || tempwhile=="float" || returnVal == "string") {
-                    // console.log("orden() declaration")
+                    // //console.log("orden() declaration")
                     //alert ('declaracion')
                     //alert(tempint)
                     let dec = this.declaracion();
@@ -4522,7 +4535,7 @@ class Analisis{
                     let isTipe = "float";
                     if(this.exist(["int",this.getIsString()]))
                         isTipe = "int";
-                    //console.log("return")
+                    ////console.log("return")
                     let t1 = this.expresion_arit();
                     //alert(t1)
 
@@ -4570,8 +4583,8 @@ class Analisis{
         if (tempReturn =="return" || tempif=="if"||tempwhile=="while"
             || tempasignar.length>0//this.exist(["int",tempasignar])||this.exist(["float",tempasignar])|| this.exist(["string",tempasignar])
             ||tempwhile == "float"|| isInt == "int" || tempReturn == "string" ) {
-            //console.log("Orden por: " + tempwhile)
-            //console.log(this.matrix)
+            ////console.log("Orden por: " + tempwhile)
+            ////console.log(this.matrix)
             
             let o = this.orden()
             //alert("Sigorden")
@@ -4595,7 +4608,7 @@ class Analisis{
         let SO = this.sig_ordenes();
         //alert("ok ordenes")
         this.preanalisis = this.input.charAt(this.actual)
-        //console.log("Error")
+        ////console.log("Error")
 
         return or+pC+SO;
     }
@@ -4648,7 +4661,7 @@ class Analisis{
         this.preanalisis = this.input.charAt(this.actual);
         if (this.preanalisis==","){
             this.lexico.push([",",13,","])
-            //console.log(",")
+            ////console.log(",")
             this.actual++;
             return this.preanalisis + this.lista_variables();
         }
@@ -4672,7 +4685,7 @@ class Analisis{
                 throw error;
             }else{
                 this.lexico.push(["identificador",0,ide])
-                //console.log(ide)
+                ////console.log(ide)
                 //this.matrix.push([t,ide])
             }
             let slv = this.sig_lista_variables();
@@ -4918,26 +4931,26 @@ const validar = () =>{
             }
                 
         }
-        //console.log(character)
+        ////console.log(character)
         if (character == "'") {
-                //console.log("Comilla simple "+ inpu.substring(position, inpu.length))
+                ////console.log("Comilla simple "+ inpu.substring(position, inpu.length))
                 if (cad == 0) {
-                    //console.log("comienza comilla simple: "+inpu.substring(position, inpu.length))
+                    ////console.log("comienza comilla simple: "+inpu.substring(position, inpu.length))
                     
                     cad = 1;
                 }else
                 if (cad == 1) {
-                    //console.log("termina comilla simple")
+                    ////console.log("termina comilla simple")
                     cad = 0;
                 }
             }
             else if (character == "\"") {
                 if (cad == 0) {
-                    //console.log("comienza comilla doble")
+                    ////console.log("comienza comilla doble")
                     cad = 2;
                 }else
                 if (cad == 2) {
-                    //console.log("termina comilla doble")
+                    ////console.log("termina comilla doble")
                     cad = 0;
                 }
             }
