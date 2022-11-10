@@ -1020,6 +1020,7 @@ function getTipe(Var,ambito) {
         i++
     }
     i = 0
+    
     while (i<VarsCode.length) {
         if (VarsCode[i][2] == "#")
             if (Var == VarsCode[i][0]) {
